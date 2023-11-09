@@ -8,24 +8,9 @@
 #include <metal_stdlib>
 using namespace metal;
 
-[[ stitchable ]] float2 shift
+[[ stitchable ]] float2 shiftToLeft
 (
- float2 position
-// float2 offset
+ float2 position // 現在のピクセル位置
  ) {
-    return float2(position.x + 10, position.y + 10);
-}
-
-
-[[ stitchable ]] float2 horizontalSwap
-(
- float2 position,
- float4 bounds
- ) {
-    float halfWidth = bounds.z / 2;
-    if (position.x <= halfWidth) {
-        return float2(position.x + halfWidth, position.y);
-    } else {
-        return float2(position.x - halfWidth, position.y);
-    }
+    return float2(position.x + 10, position.y);
 }
