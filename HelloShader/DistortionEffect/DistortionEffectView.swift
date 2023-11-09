@@ -14,6 +14,23 @@ struct DistortionEffectView: View {
     var body: some View {
         
         HStack {
+            
+            ZStack {
+                Color.yellow.opacity(0.4)
+                Rectangle()
+                    .stroke(lineWidth: 1)
+                    .frame(width: 100, height: 100)
+                    .zIndex(1)
+                Rectangle()
+                    .foregroundStyle(.blue)
+                    .frame(width: 100, height: 100)
+                    .distortionEffect(
+                        ShaderLibrary.default.shiftToLeft(),
+                        maxSampleOffset: .zero
+                    )
+            }
+            .frame(width: 150, height: 150)
+            
             ZStack {
                 Color.yellow.opacity(0.4)
                 Rectangle()

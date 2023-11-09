@@ -65,9 +65,9 @@
 			children = (
 				DA5E6A3F2AF7F20300186CA1 /* HelloShaderApp.swift */,
 				DA5E6A412AF7F20300186CA1 /* ContentView.swift */,
-				DA5E6A7B2AF9DC7D00186CA1 /* LayerEffect */,
 				DA5E6A742AF937A100186CA1 /* DistortionEffect */,
 				DA5E6A4D2AF89E4000186CA1 /* ColorEffect */,
+				DA5E6A7B2AF9DC7D00186CA1 /* LayerEffect */,
 				DA5E6A432AF7F20400186CA1 /* Assets.xcassets */,
 				DA5E6A452AF7F20400186CA1 /* Preview Content */,
 			);

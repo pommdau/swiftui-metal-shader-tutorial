@@ -19,12 +19,12 @@ using namespace metal;
     return half4(v, v, v, 1.0);
 }
 
-[[ stitchable ]] half4 shiftWithLayerEffect
+[[ stitchable ]] half4 shiftToLeftWithLayerEffect
 (
  float2 position,
  SwiftUI::Layer layer
  ) {
-    float2 newPosition = float2(position.x - 10, position.y + 10);
+    float2 newPosition = float2(position.x + 10, position.y);
     half4 color = layer.sample(newPosition);
     return color;
 }

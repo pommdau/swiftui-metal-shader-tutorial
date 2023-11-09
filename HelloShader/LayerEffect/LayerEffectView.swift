@@ -10,31 +10,31 @@ import SwiftUI
 struct LayerEffectView: View {
     var body: some View {
         HStack {
-            
-            ZStack {
-                Color.yellow.opacity(0.4)
-                Rectangle()
-                    .stroke(lineWidth: 1)
-                    .frame(width: 100, height: 100)
-                Rectangle()
-                    .foregroundStyle(.blue)
-                    .frame(width: 100, height: 100)
-                    .layerEffect(
-                        ShaderLibrary.default.shiftWithLayerEffect(),
-                        maxSampleOffset: .init(width: 1000, height: 1000)
-                    )
-            }
-            .frame(width: 150, height: 150)
-            
-            Image(.xcode)
-                .resizable()
-                .frame(width: 100, height: 100)
-                .layerEffect(
-                    ShaderLibrary.default.monochromeWithLayerEffect(),
-                    maxSampleOffset: .zero
-                )
-            
-            
+Image(.xcode)
+    .resizable()
+    .frame(width: 100, height: 100)
+    .layerEffect(
+        ShaderLibrary.default.monochromeWithLayerEffect(),
+        maxSampleOffset: .zero
+    )
+
+ZStack {
+    Color.yellow.opacity(0.4)
+    Rectangle()
+        .stroke(lineWidth: 1)
+        .frame(width: 100, height: 100)
+        .zIndex(1)
+    Rectangle()
+        .foregroundStyle(.blue)
+        .frame(width: 100, height: 100)
+        .padding(.horizontal, 10)
+        .drawingGroup()
+        .layerEffect(
+            ShaderLibrary.default.shiftToLeftWithLayerEffect(),
+            maxSampleOffset: .init(width: 10, height: 0)
+        )
+}
+.frame(width: 150, height: 150)
         }
     }
 }
