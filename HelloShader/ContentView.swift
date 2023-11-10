@@ -11,15 +11,20 @@ struct ContentView: View {
         
     var body: some View {
         VStack(alignment: .leading) {
-            Text("ColorEffect")
-            ColorEffectView()
+            VStack(alignment: .leading) {
+                Text("ColorEffect")
+                ColorEffectView()
+            }
+            VStack(alignment: .leading) {
+                Text("DistortionEffect")
+                DistortionEffectView()
+            }
+            
+            VStack(alignment: .leading) {
+                Text("LayerEffect")
+                LayerEffectView()
+            }
         }
-        VStack(alignment: .leading) {
-            Text("DistortionEffect")
-            DistortionEffectView()
-        }
-        
-        LayerEffectView()
     }
 }
 
