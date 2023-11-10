@@ -24,6 +24,11 @@ struct ContentView: View {
                 Text("LayerEffect")
                 LayerEffectView()
             }
+            
+            VStack(alignment: .leading) {
+                Text("ArgumentSample")
+                ArgumentSampleView()
+            }
         }
     }
 }

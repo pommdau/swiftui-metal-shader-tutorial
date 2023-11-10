@@ -19,6 +19,8 @@
 		DA5E6A7D2AF9DD9A00186CA1 /* LayerEffectShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = DA5E6A7C2AF9DD9A00186CA1 /* LayerEffectShader.metal */; };
 		DA5E6A802AFDEA2400186CA1 /* GLSLtoMSLView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5E6A7F2AFDEA2400186CA1 /* GLSLtoMSLView.swift */; };
 		DA5E6A822AFDEA2E00186CA1 /* GLSLtoMSLShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = DA5E6A812AFDEA2E00186CA1 /* GLSLtoMSLShader.metal */; };
+		DA5E6AA22AFE5BB400186CA1 /* ArgumentSampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5E6AA12AFE5BB400186CA1 /* ArgumentSampleView.swift */; };
+		DA5E6AA42AFE5BC200186CA1 /* ArgumentSampleShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = DA5E6AA32AFE5BC200186CA1 /* ArgumentSampleShader.metal */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,8 @@
 		DA5E6A7C2AF9DD9A00186CA1 /* LayerEffectShader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = LayerEffectShader.metal; sourceTree = "<group>"; };
 		DA5E6A7F2AFDEA2400186CA1 /* GLSLtoMSLView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GLSLtoMSLView.swift; sourceTree = "<group>"; };
 		DA5E6A812AFDEA2E00186CA1 /* GLSLtoMSLShader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = GLSLtoMSLShader.metal; sourceTree = "<group>"; };
+		DA5E6AA12AFE5BB400186CA1 /* ArgumentSampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArgumentSampleView.swift; sourceTree = "<group>"; };
+		DA5E6AA32AFE5BC200186CA1 /* ArgumentSampleShader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = ArgumentSampleShader.metal; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +73,7 @@
 			children = (
 				DA5E6A3F2AF7F20300186CA1 /* HelloShaderApp.swift */,
 				DA5E6A412AF7F20300186CA1 /* ContentView.swift */,
+				DA5E6AA02AFE5BAC00186CA1 /* ArgumentSample */,
 				DA5E6A7E2AFDE9FC00186CA1 /* GLSLtoMSL */,
 				DA5E6A742AF937A100186CA1 /* DistortionEffect */,
 				DA5E6A4D2AF89E4000186CA1 /* ColorEffect */,
@@ -121,6 +126,15 @@
 				DA5E6A812AFDEA2E00186CA1 /* GLSLtoMSLShader.metal */,
 			);
 			path = GLSLtoMSL;
+			sourceTree = "<group>";
+		};
+		DA5E6AA02AFE5BAC00186CA1 /* ArgumentSample */ = {
+			isa = PBXGroup;
+			children = (
+				DA5E6AA12AFE5BB400186CA1 /* ArgumentSampleView.swift */,
+				DA5E6AA32AFE5BC200186CA1 /* ArgumentSampleShader.metal */,
+			);
+			path = ArgumentSample;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,9 +214,11 @@
 				DA5E6A7A2AF9DC7B00186CA1 /* LayerEffectView.swift in Sources */,
 				DA5E6A502AF8AB3100186CA1 /* ColorEffectShader.metal in Sources */,
 				DA5E6A782AF937E700186CA1 /* DistortionEffectView.swift in Sources */,
+				DA5E6AA42AFE5BC200186CA1 /* ArgumentSampleShader.metal in Sources */,
 				DA5E6A802AFDEA2400186CA1 /* GLSLtoMSLView.swift in Sources */,
 				DA5E6A822AFDEA2E00186CA1 /* GLSLtoMSLShader.metal in Sources */,
 				DA5E6A522AF8AC2900186CA1 /* ColorEffectView.swift in Sources */,
+				DA5E6AA22AFE5BB400186CA1 /* ArgumentSampleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
