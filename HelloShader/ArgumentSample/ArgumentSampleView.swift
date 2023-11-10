@@ -10,8 +10,7 @@ import SwiftUI
 struct ArgumentSampleView: View {
     var body: some View {
         HStack {
-            HoverLocationSample()
-            
+            DragGestureSample()            
             TimeSampleView()
         }
     }
@@ -37,54 +36,30 @@ struct TimeSampleView: View {
     }
 }
 
-struct HoverLocationSample: View {
+struct DragGestureSample: View {
     
-    @State private var hoverLocation: CGPoint = .init(x: 50, y: 50)
+    @State private var draggingLocation: CGPoint = .init(x: 50, y: 50)
     
     var body: some View {
         RoundedRectangle(cornerRadius: 12)
             .foregroundStyle(.black)
             .frame(width: 100, height: 100)
             .layerEffect(
-                ShaderLibrary.default.hoverLocationSample(
+                ShaderLibrary.default.draggingLocationSample(
                     .boundingRect,
-                    .float2(hoverLocation)
+                    .float2(draggingLocation)
                 ),
                 maxSampleOffset: .zero
             )
-            .dragGesture(hoverLocation: $hoverLocation)
-    }
-}
-
-extension View {
-    
-    func dragGesture(hoverLocation: Binding<CGPoint>) -> some View {
-#if os(iOS)
-        self
             .gesture(
                 DragGesture(coordinateSpace: .local).onChanged { value in
-                    hoverLocation.wrappedValue = value.location
+                    draggingLocation = value.location
                 }.onEnded { value in
                     withAnimation(.easeInOut(duration: 0.1)) {
-                        hoverLocation.wrappedValue = .init(x: 50, y: 50)
+                        draggingLocation = .init(x: 50, y: 50)
                     }
                 }
             )
-#elseif os(macOS)
-        self
-            .onContinuousHover { phase in
-                switch phase {
-                case .active(let location):
-                    hoverLocation.wrappedValue = location
-                case .ended:
-                    withAnimation(.easeInOut(duration: 0.1)) {
-                        hoverLocation.wrappedValue = .init(x: 50, y: 50)
-                    }
-                }
-            }
-#else
-        self
-#endif
     }
 }
 
