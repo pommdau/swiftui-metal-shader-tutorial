@@ -17,6 +17,14 @@
 		DA5E6A782AF937E700186CA1 /* DistortionEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5E6A772AF937E700186CA1 /* DistortionEffectView.swift */; };
 		DA5E6A7A2AF9DC7B00186CA1 /* LayerEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5E6A792AF9DC7B00186CA1 /* LayerEffectView.swift */; };
 		DA5E6A7D2AF9DD9A00186CA1 /* LayerEffectShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = DA5E6A7C2AF9DD9A00186CA1 /* LayerEffectShader.metal */; };
+		DA5E6A802AFDEA2400186CA1 /* GLSLtoMSLView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5E6A7F2AFDEA2400186CA1 /* GLSLtoMSLView.swift */; };
+		DA5E6A822AFDEA2E00186CA1 /* GLSLtoMSLShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = DA5E6A812AFDEA2E00186CA1 /* GLSLtoMSLShader.metal */; };
+		DA5E6AA22AFE5BB400186CA1 /* ArgumentSampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5E6AA12AFE5BB400186CA1 /* ArgumentSampleView.swift */; };
+		DA5E6AA42AFE5BC200186CA1 /* ArgumentSampleShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = DA5E6AA32AFE5BC200186CA1 /* ArgumentSampleShader.metal */; };
+		DA5E6AA82AFE788C00186CA1 /* CurtainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5E6AA62AFE788C00186CA1 /* CurtainView.swift */; };
+		DA5E6AA92AFE788C00186CA1 /* CurtainShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = DA5E6AA72AFE788C00186CA1 /* CurtainShader.metal */; };
+		DA5E6AAE2AFE7CF300186CA1 /* PageCurlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5E6AAC2AFE7CF300186CA1 /* PageCurlView.swift */; };
+		DA5E6AAF2AFE7CF300186CA1 /* PageCurl.metal in Sources */ = {isa = PBXBuildFile; fileRef = DA5E6AAD2AFE7CF300186CA1 /* PageCurl.metal */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +39,14 @@
 		DA5E6A772AF937E700186CA1 /* DistortionEffectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistortionEffectView.swift; sourceTree = "<group>"; };
 		DA5E6A792AF9DC7B00186CA1 /* LayerEffectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayerEffectView.swift; sourceTree = "<group>"; };
 		DA5E6A7C2AF9DD9A00186CA1 /* LayerEffectShader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = LayerEffectShader.metal; sourceTree = "<group>"; };
+		DA5E6A7F2AFDEA2400186CA1 /* GLSLtoMSLView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GLSLtoMSLView.swift; sourceTree = "<group>"; };
+		DA5E6A812AFDEA2E00186CA1 /* GLSLtoMSLShader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = GLSLtoMSLShader.metal; sourceTree = "<group>"; };
+		DA5E6AA12AFE5BB400186CA1 /* ArgumentSampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArgumentSampleView.swift; sourceTree = "<group>"; };
+		DA5E6AA32AFE5BC200186CA1 /* ArgumentSampleShader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = ArgumentSampleShader.metal; sourceTree = "<group>"; };
+		DA5E6AA62AFE788C00186CA1 /* CurtainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurtainView.swift; sourceTree = "<group>"; };
+		DA5E6AA72AFE788C00186CA1 /* CurtainShader.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = CurtainShader.metal; sourceTree = "<group>"; };
+		DA5E6AAC2AFE7CF300186CA1 /* PageCurlView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageCurlView.swift; sourceTree = "<group>"; };
+		DA5E6AAD2AFE7CF300186CA1 /* PageCurl.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = PageCurl.metal; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +81,8 @@
 			children = (
 				DA5E6A3F2AF7F20300186CA1 /* HelloShaderApp.swift */,
 				DA5E6A412AF7F20300186CA1 /* ContentView.swift */,
+				DA5E6AA02AFE5BAC00186CA1 /* ArgumentSample */,
+				DA5E6A7E2AFDE9FC00186CA1 /* GLSLtoMSL */,
 				DA5E6A742AF937A100186CA1 /* DistortionEffect */,
 				DA5E6A4D2AF89E4000186CA1 /* ColorEffect */,
 				DA5E6A7B2AF9DC7D00186CA1 /* LayerEffect */,
@@ -107,6 +125,44 @@
 				DA5E6A7C2AF9DD9A00186CA1 /* LayerEffectShader.metal */,
 			);
 			path = LayerEffect;
+			sourceTree = "<group>";
+		};
+		DA5E6A7E2AFDE9FC00186CA1 /* GLSLtoMSL */ = {
+			isa = PBXGroup;
+			children = (
+				DA5E6A7F2AFDEA2400186CA1 /* GLSLtoMSLView.swift */,
+				DA5E6A812AFDEA2E00186CA1 /* GLSLtoMSLShader.metal */,
+				DA5E6AAB2AFE7CF300186CA1 /* PageCurl */,
+				DA5E6AA52AFE787400186CA1 /* Curtain */,
+			);
+			path = GLSLtoMSL;
+			sourceTree = "<group>";
+		};
+		DA5E6AA02AFE5BAC00186CA1 /* ArgumentSample */ = {
+			isa = PBXGroup;
+			children = (
+				DA5E6AA12AFE5BB400186CA1 /* ArgumentSampleView.swift */,
+				DA5E6AA32AFE5BC200186CA1 /* ArgumentSampleShader.metal */,
+			);
+			path = ArgumentSample;
+			sourceTree = "<group>";
+		};
+		DA5E6AA52AFE787400186CA1 /* Curtain */ = {
+			isa = PBXGroup;
+			children = (
+				DA5E6AA62AFE788C00186CA1 /* CurtainView.swift */,
+				DA5E6AA72AFE788C00186CA1 /* CurtainShader.metal */,
+			);
+			path = Curtain;
+			sourceTree = "<group>";
+		};
+		DA5E6AAB2AFE7CF300186CA1 /* PageCurl */ = {
+			isa = PBXGroup;
+			children = (
+				DA5E6AAC2AFE7CF300186CA1 /* PageCurlView.swift */,
+				DA5E6AAD2AFE7CF300186CA1 /* PageCurl.metal */,
+			);
+			path = PageCurl;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,12 +237,20 @@
 			files = (
 				DA5E6A422AF7F20300186CA1 /* ContentView.swift in Sources */,
 				DA5E6A7D2AF9DD9A00186CA1 /* LayerEffectShader.metal in Sources */,
+				DA5E6AAF2AFE7CF300186CA1 /* PageCurl.metal in Sources */,
+				DA5E6AA82AFE788C00186CA1 /* CurtainView.swift in Sources */,
 				DA5E6A402AF7F20300186CA1 /* HelloShaderApp.swift in Sources */,
 				DA5E6A762AF937CC00186CA1 /* DistortionEffectShader.metal in Sources */,
 				DA5E6A7A2AF9DC7B00186CA1 /* LayerEffectView.swift in Sources */,
 				DA5E6A502AF8AB3100186CA1 /* ColorEffectShader.metal in Sources */,
+				DA5E6AA92AFE788C00186CA1 /* CurtainShader.metal in Sources */,
 				DA5E6A782AF937E700186CA1 /* DistortionEffectView.swift in Sources */,
+				DA5E6AAE2AFE7CF300186CA1 /* PageCurlView.swift in Sources */,
+				DA5E6AA42AFE5BC200186CA1 /* ArgumentSampleShader.metal in Sources */,
+				DA5E6A802AFDEA2400186CA1 /* GLSLtoMSLView.swift in Sources */,
+				DA5E6A822AFDEA2E00186CA1 /* GLSLtoMSLShader.metal in Sources */,
 				DA5E6A522AF8AC2900186CA1 /* ColorEffectView.swift in Sources */,
+				DA5E6AA22AFE5BB400186CA1 /* ArgumentSampleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,6 +399,8 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ikeh1024.HelloShader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -364,6 +430,8 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ikeh1024.HelloShader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
