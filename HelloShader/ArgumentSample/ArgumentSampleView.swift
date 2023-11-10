@@ -39,7 +39,7 @@ struct TimeSampleView: View {
 
 struct HoverLocationSample: View {
     
-    @State private var hoverLocation: CGPoint = .zero
+    @State private var hoverLocation: CGPoint = .init(x: 50, y: 50)
     
     var body: some View {
         RoundedRectangle(cornerRadius: 12)
@@ -52,26 +52,41 @@ struct HoverLocationSample: View {
                 ),
                 maxSampleOffset: .zero
             )
-//            .onContinuousHover { phase in
-//                switch phase {
-//                case .active(let location):
-//                    hoverLocation = location
-//                case .ended:
-//                    break
-//                }
-//            }
-            .gesture(
-                DragGesture(coordinateSpace: .local).onChanged { value in
-                    hoverLocation = value.location
-                }.onEnded { value in
-                    print(value.location)
-                    hoverLocation = value.location
-                }
-            )
+            .dragGesture(hoverLocation: $hoverLocation)
     }
 }
 
-
+extension View {
+    
+    func dragGesture(hoverLocation: Binding<CGPoint>) -> some View {
+#if os(iOS)
+        self
+            .gesture(
+                DragGesture(coordinateSpace: .local).onChanged { value in
+                    hoverLocation.wrappedValue = value.location
+                }.onEnded { value in
+                    withAnimation(.easeInOut(duration: 0.1)) {
+                        hoverLocation.wrappedValue = .init(x: 50, y: 50)
+                    }
+                }
+            )
+#elseif os(macOS)
+        self
+            .onContinuousHover { phase in
+                switch phase {
+                case .active(let location):
+                    hoverLocation.wrappedValue = location
+                case .ended:
+                    withAnimation(.easeInOut(duration: 0.1)) {
+                        hoverLocation.wrappedValue = .init(x: 50, y: 50)
+                    }
+                }
+            }
+#else
+        self
+#endif
+    }
+}
 
 #Preview {
     ArgumentSampleView()
