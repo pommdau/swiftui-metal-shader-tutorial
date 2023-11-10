@@ -10,6 +10,13 @@ import SwiftUI
 struct ContentView: View {
         
     var body: some View {
+        tutorialView()
+//        CurtainView()
+//        PageCurlView()
+    }
+    
+    @ViewBuilder
+    private func tutorialView() -> some View {
         ScrollView {
             VStack(alignment: .leading) {
                 VStack(alignment: .leading) {

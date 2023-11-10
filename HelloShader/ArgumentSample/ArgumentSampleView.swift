@@ -10,7 +10,7 @@ import SwiftUI
 struct ArgumentSampleView: View {
     var body: some View {
         HStack {
-            DragGestureSample()            
+            DragGestureSample()
             TimeSampleView()
         }
     }
