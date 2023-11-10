@@ -32,7 +32,7 @@ using namespace metal;
  float4 bounds // x,y,z,w = (x, y, width, height)
  ) {
     // (0, 0) ~ (1, 1)に座標を正規化
-    float2 fragCoord = position;
+    float2 fragCoord = float2(position.x, bounds.z - position.y);
     float2 r = float2(fragCoord.x / bounds.z,
                       fragCoord.y / bounds.w);
     
