@@ -18,12 +18,12 @@ struct GLSLtoMSLView: View {
                     maxSampleOffset: .zero
                 )
             
-Rectangle()
-    .frame(width: 100, height: 100)
-    .layerEffect(
-        ShaderLibrary.default.tutorial7(.boundingRect),
-        maxSampleOffset: .zero
-    )
+            Rectangle()
+                .frame(width: 100, height: 100)
+                .layerEffect(
+                    ShaderLibrary.default.tutorial7(.boundingRect),
+                    maxSampleOffset: .zero
+                )
         }
     }
 }

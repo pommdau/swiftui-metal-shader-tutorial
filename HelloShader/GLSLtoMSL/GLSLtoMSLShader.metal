@@ -27,22 +27,23 @@ using namespace metal;
 
 [[ stitchable ]] half4 tutorial7
 (
- float2 _position,
+ float2 position,
  SwiftUI::Layer layer,
  float4 bounds // x,y,z,w = (x, y, width, height)
  ) {
     // (0, 0) ~ (1, 1)に座標を正規化
-    float2 r = float2(fragCoord.x / iResolution.x,
-                      fragCoord.y / iResolution.y);
+    float2 fragCoord = position;
+    float2 r = float2(fragCoord.x / bounds.z,
+                      fragCoord.y / bounds.w);
     
     float3 color1 = float3(0.841, 0.582, 0.594);
     float3 color2 = float3(0.884, 0.850, 0.648);
     float3 color3 = float3(0.348, 0.555, 0.641);
     float3 pixel;
         
-    if( r.x < 1.0/3.0) {
+    if( r.y < 1.0/3.0) {
         pixel = color1;
-    } else if( r.x < 2.0/3.0 ) {
+    } else if( r.y < 2.0/3.0 ) {
         pixel = color2;
     } else {
         pixel = color3;
