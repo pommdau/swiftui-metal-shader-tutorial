@@ -1,6 +1,7 @@
 # swiftui-metal-shader-tutorial
-# Blog
+# Posts
 - [SwiftUI Metal Shader入門 \+ GLSL\->MSLへの置き換え](https://zenn.dev/ikeh1024/articles/cc51846dfad295)
+- [SwiftUI Metal Shader Tutorials \+ Replacement from GLSL to MSL](https://medium.com/@pondau1024/swiftui-metal-shader-tutorials-replacement-from-glsl-to-msl-6e97b7307dc2)
 
 # Screenshots
 
